@@ -1,0 +1,194 @@
+.main-block {
+  position:relative;
+  width: 100%;
+  padding: 1.8rem 0 0.5rem 0;
+  transition: 1.5s;
+
+  .swiper{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+
+    img{
+      object-fit:cover;
+      object-position: center;
+    }
+  }
+
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 0.13rem;
+
+    svg {
+      width: 1.2rem;
+      height: 1.03rem;
+      transition: .5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__card-with-logo {
+    position: relative;
+    width: 1.74rem;
+    height: 1.03rem;
+    background-color: white;
+    border-radius: 0.14rem;
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      margin-top: 0.11rem;
+      width: 1.37rem;
+      height: 0.57rem;
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
+
+    &:after {
+      content: "Застройщик";
+      position: absolute;
+      font-family: 'DIN Pro medium';
+      font-size: 0.11rem;
+      color: #DF7D00;
+      line-height: 115%;
+      bottom: 0.14rem;
+    }
+  }
+
+  &__card-information {
+    color: #DF7D00;
+    font-size: 0.11rem;
+    text-align: center;
+    font-family: 'DIN Pro medium';
+  }
+
+  &__information {
+    max-width: 5.8rem;
+    color: white;
+    padding: 0.56rem 0 0 0;
+  }
+
+  &__title {
+    font-size: 0.17rem;
+  }
+
+  &__company-name {
+    font-size: 0.85rem;
+    line-height: 120%;
+    font-family: 'DIN Pro medium';
+  }
+
+  &__list {
+    margin-top: 0.3rem;
+  }
+
+  &__list-point {
+    display: flex;
+    gap: 0.2rem;
+    font-size: 0.18rem;
+    font-family: 'DIN Pro medium';
+    margin-bottom: 0.2rem;
+  }
+
+  &__list-svg3 {
+    margin-right: 0.07rem;
+  }
+
+  &__planings {
+    margin: 0.32rem 0 0.16rem 0;
+    font-size: 0.26rem;
+    line-height: 160%;
+  }
+
+  &__aparts {
+    background-image: url('../images/main-block/main-block__aparts.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 0.82rem 0 0.2rem 0.24rem;
+    display: flex;
+    gap: 0.12rem;
+    font-family: 'DIN Pro bold';
+
+    svg {
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+
+    .btn {
+      padding: 0.16rem 0.24rem;
+      border: none;
+      width: 2.5rem;
+
+      &:hover {
+        border: none;
+
+        svg path {
+          fill: black;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &__cards {
+      display: grid;
+      gap: 0.3rem;
+      max-width: 7.8rem;
+      grid-template-columns: 1.74rem 1.2rem 1.2rem 1.2rem 1.2rem;
+      margin:auto;
+    }
+
+    &__card-with-logo {
+      margin: 0.65rem 0;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+
+    &__information{
+      margin: auto;
+    }
+
+
+  }
+
+  @media screen and (max-width: 500px) {
+    & {
+      padding-top: 1rem;
+    }
+
+    &__cards {
+      display:none;
+    }
+
+    &__card-with-logo {
+      grid-column: 1 / 2;
+      grid-row: 1 / 5;
+      margin-top: 2rem;
+    }
+
+    &__aparts {
+      background-image: none;
+      flex-direction: column;
+      padding: 0;
+    }
+
+  }
+
+}

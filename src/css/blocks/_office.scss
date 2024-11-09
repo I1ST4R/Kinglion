@@ -1,0 +1,249 @@
+.office {
+	margin: 0.5rem auto;
+  display:flex;
+  gap:0.36rem;
+
+  .article__title{
+    margin-bottom: 0.3rem;
+  }
+
+  &__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.2rem;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  &__map {
+    width: 100%;
+    height:4.16rem;
+    border-radius: 0.1rem;
+  }
+
+  &__right {
+    width: 47%;
+    padding-top: 0.94rem;
+    font-size: 0.18rem;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 0.37rem;
+    height: 1.2rem;
+    justify-content: space-around;
+
+    .btn{
+      padding: 0.08rem 0.17rem;
+      grid-template-columns: auto;
+    }
+  }
+
+  &__text-bold {
+    font-family: 'DIN Pro bold';
+  }
+
+  &__worktime-contacts {
+    display: flex;
+    justify-content: space-between;
+
+    a{
+      border-bottom: 2px solid white;
+      transition: .5s;
+
+      &:hover{
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+
+  &__worktime {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+  }
+
+  &__contacts {
+    width: 40%;
+    height: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__tg {
+    width: 45%;
+    display: flex;
+    gap:0.1rem;
+    align-items: center;
+    font-size: 0.14rem;
+    font-family: 'DIN Pro normal';
+
+    svg{
+      width:0.22rem;
+      height:0.22rem;
+    }
+  }
+
+  &__form {
+    margin-top: 0.9rem;
+
+    &-title {
+      font-family: 'DIN Pro normal';
+      font-size: 0.26rem;
+      color: #DF7D00;
+    }
+  }
+
+  &__form-submit {
+    margin-top: 0.35rem;
+    display: grid;
+    grid-template-columns: 2.1rem auto;
+    gap: 0.2rem;
+
+    .btn {
+      padding:0.16rem 0.25rem;
+      grid-template-columns: auto;
+    }
+  }
+
+  &__apply {
+    max-width: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2rem;
+
+    &-text {
+      width: 85%;
+      color: #DF7D00;
+      font-family: 'DIN Pro normal';
+      font-size: 0.14rem;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .office__fake:before {
+      opacity: 1;
+    }
+  }
+
+  &__fake {
+    width: 0.25rem;
+    height: 0.25rem;
+    border: 1px solid #DF7D00;
+    border-radius: 0.05rem;
+    position: relative;
+    transition: .5s;
+    
+    &:hover{
+      background-color: #a9e3f8;
+    }
+
+    &--error{
+      border: 1px solid rgb(255, 54, 54);
+      box-shadow: 0 0 0 2px rgb(255, 54, 54);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0.25rem;
+      height: 0.25rem;
+      border: 1px solid #DF7D00;
+      left:-0.01rem;
+      top:-0.02rem;
+      border-radius: 0.05rem;
+      opacity: 0;
+      background-color: #DF7D00;
+      transition: .3s;
+    }
+
+    svg{
+      position: absolute;
+      z-index: 2;
+      width:0.13rem;
+      height:0.13rem;
+      left:0.05rem;
+      top:0.06rem;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &{
+      flex-direction: column;
+    }
+
+    .article__title{
+      text-align: center;
+    }
+
+    &__left,
+    &__right{
+      width:100%;
+      max-width: 7.7rem;
+      margin:auto;
+      padding-top:0;
+    }
+
+
+  }
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 2.5rem;
+
+  &__field {
+    height: 0.5rem;
+    width: 100%;
+    font-size:0.18rem;
+    padding-left: 0.16rem;
+    border-radius: 0.04rem;
+    background-color: #E7F2F6;
+    border: 3px solid white;
+    color: black;
+    transition: background-color .5s;
+
+    &:hover {
+      background-color: #a9e3f8;
+    }
+
+    &-message {
+      height: 1.3rem;
+    }
+  }
+
+  &__error-message{
+    font-family: 'DIN Pro medium';
+    color:rgb(255, 54, 54);
+    padding:0;
+    height:0;
+    transform:scaleY(0);
+    transition:.5s;
+
+    &--active{
+      padding:0.1rem 0;
+      height:auto;
+      transform:scaleY(1);
+    }
+  }
+
+  &__phone-mail {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}

@@ -1,0 +1,119 @@
+.documents {
+  margin-top: 0.5rem;
+
+  &__first-title {
+    font-size: 0.5rem;
+  }
+
+  &__information {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0.3rem 0 0.5rem 0;
+    gap: 0.3rem;
+  }
+
+  &__text {
+    font-size: 0.18rem;
+    line-height: 170%;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap:0.15rem;
+
+    svg{
+      width: 2.11rem;
+      height: 0.62rem;
+    }
+
+    .btn{
+      padding: 0.08rem 0.23rem;
+    }
+  }
+
+  &__btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn{
+      padding: 0.08rem 0.23rem;
+      background-color: #2467CD;
+      font-family: 'DIN Pro normal';
+    } 
+  }
+
+  &__img {
+    height: 3.71rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__ascroy {
+    margin-top:-0.5rem;
+    background-image: url(../images/other-blocks/documents-bg.png);
+
+    .container{
+      padding: 0.8rem 0.3rem 0.5rem 0.3rem;
+    }
+
+    .documents__information{
+      margin-top:0;
+    }
+
+    .documents__text{
+      margin-top:0.4rem;
+    }
+
+    ul{
+      margin: 0.1rem 0 0 0.3rem;
+    }
+  }
+
+  &__second-title {
+    font-size: 0.4rem;
+  }
+
+  &__logo-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.2rem;
+
+    svg{
+      width:2rem;
+      height:2rem;
+    }
+
+    .btn{
+      grid-template-columns: auto;
+      padding:0.16rem 0.27rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &__img{
+      display:none;
+    }
+
+    &__information{
+      grid-template-columns: auto;
+    }
+
+    &__btns{
+      width:260px;
+      margin: auto;
+    }
+
+    &__logo-btn{
+      width:110px;
+      margin: auto;
+    }
+
+    .article__title, 
+    .documents__second-title{
+      text-align: center;
+    }
+  }
+}

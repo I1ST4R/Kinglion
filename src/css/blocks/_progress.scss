@@ -1,0 +1,213 @@
+.progress {
+  margin-top: 0.5rem;
+
+  &__cards {
+    margin-top: 0.36rem;
+    display: flex;
+    justify-content: space-between;
+    gap:0.4rem;
+  }
+
+  &__left-card {
+    width: 54%;
+  }
+
+  &__card-title {
+    font-family: 'DIN Pro medium';
+    font-size: 0.26rem;
+    color: #DF7D00;
+    margin-bottom: 0.15rem;
+  }
+
+  .swiper-wrapper{
+    div{
+      box-sizing:border-box;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      border:3px solid black;
+      border-radius: 10px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 10px;
+    user-select: none;
+  }
+
+  .swiper{
+    padding:0 0 0.3rem 0;
+  }
+
+  &__slider-left,
+  &__slider-right{
+    position:absolute;
+    top:45%;
+    width:0.48rem;
+    height:0.48rem;
+    border-radius: 50%;
+    margin:0.2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 0;
+    z-index:2;
+    cursor:pointer;
+    transition:.5s;
+
+    svg{
+      width:0.28rem;
+      height:0.28rem;
+    }
+
+    &:hover{
+      svg path{
+        fill:black
+      }
+
+      background-color: rgba(255,255,255,0.8);
+    }
+  }
+
+  .swiper-button-disabled{
+    cursor:auto;
+    background-color: rgba(0,0,0,0.2);
+
+    svg path{
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__slider-right{
+    right:0;
+  }
+
+  &__card-information {
+    width: 100%;
+    margin-top: -0.6rem;
+    border: 3px solid #DF7D00;
+    border-top: none;
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    font-size: 0.16rem;
+    font-family: 'DIN Pro medium';
+    line-height: 200%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 20% 0.34rem 0;
+
+    .orange-text{
+      cursor:pointer;
+
+      &:hover{
+        border-bottom: 2px solid #DF7D00;
+      }
+    }
+  }
+
+  &__card-part {
+    list-style-type: none;
+    color: #cdcdcd;
+  }
+
+  &__year {
+    position: relative;
+    bottom: 0.19rem;
+    left: 0.44rem;
+    width: 0.76rem;
+    height: 0.4rem;
+    color: white;
+    background-color: #DF7D00;
+    border-radius: 0.3rem;
+    font-size: 0.14rem;
+    font-family: 'DIN Pro medium';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__right-card {
+    position: relative;
+    width: 40%;
+  }
+
+  &__video {
+    width: 100%;
+    position: absolute;
+    height: 450px;
+    object-position: top;
+    object-fit: contain;
+    border-radius: 0.1rem;
+  }
+
+  @media screen and (max-width: 1400px) {
+    &__left-card {
+      width: 8rem;
+    }
+
+    &__right-card {
+      position: relative;
+      width: 6.5rem;
+    }
+
+    &__video, &__img {
+      height:5.2rem;
+    }
+
+  }
+
+  @media screen and (max-width: 800px) {
+    &{
+      height:820px;
+    }
+
+    .article__title{
+      text-align: center;
+    }
+
+    &__cards {
+      flex-direction: column;
+      justify-content: unset;
+    }
+
+    &__left-card {
+      max-width: 9rem;
+      margin:auto;
+    }
+
+    &__right-card{
+      width:446px;
+      margin:auto;
+    }
+
+    &__video, &__img {
+      height:auto;
+    }
+
+    &__left-card{
+      padding-right: 0.3rem;
+    }
+
+  }
+
+  @media screen and (max-width: 500px) {
+    &{
+      height:170vw;
+    }
+
+    &__right-card, &__left-card{
+      width:100%;
+      padding-right:0;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    &{
+      height:190vw;
+    }
+  }
+}

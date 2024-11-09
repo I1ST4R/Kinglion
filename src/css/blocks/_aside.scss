@@ -1,0 +1,126 @@
+.aside{
+	width: 214px;
+	position:fixed;
+	background-color: #DF7D00;
+	z-index: 4;
+	color:white;
+	font-size: 0.11rem;
+	transition: .5s;
+  transform:scaleX(0);
+  height:0;
+  
+
+  &--visible{
+    transform:scaleX(1);
+    height:100%;
+  }
+
+  &-menu{
+    width: 0.64rem;
+    height: 0.43rem;
+    font-size:0;
+    opacity:0;
+    cursor:pointer;
+    transition:.5s;
+
+    &--visible{
+      opacity:1;
+    }
+  }
+
+  &__icon-adress{
+    width: 140px;
+    margin:auto;
+    padding: 16px 0;
+
+    p{
+      margin-top: 0.12rem;
+      text-align:center;
+    }
+  }
+
+  .btn{
+    width:196px;
+    margin:auto;
+    grid-template-columns: auto;
+    padding:11px 29px;
+    font-size:12px;
+
+    &:hover{
+      background-color: #fff;
+      color:black;
+    }
+  }
+
+  &__menu{
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 270%;
+    margin-top: 0.1rem;
+  }
+
+  &__page {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.205);
+    display: flex;
+    gap: 0.05rem;
+    align-items: center;
+    padding-left: 10px;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.205);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.384);
+    }
+  }
+
+  &__information {
+    padding: 0.1rem 0 0.16rem 14px;
+    line-height: 120%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.15rem;
+
+    .btn{
+      grid-template-columns: auto auto;
+      background-color: #fff;
+      color:#DF7D00;
+      padding:5px 12px;
+      margin-left: -5px;
+
+      &:hover{
+        background-color: black;
+        color:white;
+
+        svg path{
+          fill: white;
+        }
+      }
+    }
+  }
+
+  &__office-title{
+    font-size:12px;
+  }
+
+  &__phone {
+    font-size: 20px;
+    line-height: 130%;
+    font-family: 'DIN Pro bold';
+    padding-right: 0.28rem;
+
+    svg{
+      margin-top: 6px;
+    }
+  }
+
+  &__ofice-information {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+}

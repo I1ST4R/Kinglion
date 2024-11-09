@@ -1,0 +1,54 @@
+.footer {
+	background-color: #DF7D00;
+
+  .container{
+    height:1rem;
+	  display: flex;
+	  justify-content: space-between;
+	  color: white;
+  }
+
+  &__kinglion {
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+    font-size: 0.16rem;
+    font-family: 'DIN Pro normal';
+  }
+
+  &__development {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-link {
+      font-size:0.16rem;
+      text-decoration: underline;
+      transition: .9s;
+  
+      &:hover {
+        text-decoration: none;
+        color: rgb(226, 226, 226);
+      }
+    }
+
+    svg{
+      width:0.64rem;
+      height:0.34rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    &{
+      flex-direction: column;
+    }
+
+    &__kinglion, 
+    &__development {
+      width:180px;
+      margin: auto;
+    }
+
+  }
+}

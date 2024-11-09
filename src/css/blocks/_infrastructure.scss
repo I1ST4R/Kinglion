@@ -1,0 +1,336 @@
+
+.infrastructure{
+  width:100%;
+  display:grid;
+  
+  &__header .container{
+    padding: 0.5rem 0.3rem 0.36rem 0.3rem;
+    display: flex;
+    gap:0.34rem;
+    align-items: center;
+  }
+
+  &__switcher {
+    width: 300px;
+    height: 43px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 25px;
+    border: 3px solid #2467CD;
+    font-size: 12px;
+    font-family: 'DIN Pro medium';
+    cursor: pointer;
+    user-select: none;
+
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      border-radius: 23px;
+      color: #2467CD;
+      transition: .5s;
+
+      &--active{
+        background-color: #2467CD;
+        color:white;
+      }
+    }
+
+  }
+
+  &__map {
+    width: 100%;
+    transition: .5s;
+
+    &-icons {
+      position: relative;
+      bottom: 7.2rem;
+      left: 10%
+    }
+
+    &--active{
+      transform: scaleX(0);
+      max-height:0;
+    }
+  }
+
+  &__information {
+    background-color: #E7F2F6;
+    transition: 0.3s;
+
+    &--active{
+      transform: scaleX(0);
+      max-height:0;
+    }
+
+    .container{
+      max-width: 1660px;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    padding-top: 0.46rem;
+  }
+
+  &__category {
+    background-color: white;
+    border-radius: 0.3rem;
+    padding: 0.04rem 0.14rem 0.04rem 0.04rem;
+    font-size: 0.14rem;
+    font-family: 'DIN Pro medium';
+    display: flex;
+    gap: 0.07rem;
+    align-items: center;
+    box-shadow: 0 0.04rem 0.04rem 0 rgba(0, 0, 0, 0.25);
+    transition:.5s;
+
+    &:hover{
+      transform: scale(1.1)
+    }
+
+    svg{
+      width:0.32rem;
+      height:0.32rem;
+    }
+  }
+
+  &__cards {
+    padding: 0.4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    font-size: 16px;
+  }
+
+  &__card {
+    position: relative;
+    width:280px;
+    height: 250px;
+    display: flex;
+    align-items: end;
+    gap: 0.11rem;
+    transition:.5s;
+
+    &--big{
+      height: 270px;
+    }
+
+    &:hover{
+      transform: scale(1.1)
+    }
+
+    &-link {
+      font-size: 18px;
+      font-family: 'DIN Pro bold';
+      text-decoration: underline;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 190px;
+        border-radius: 0.1rem;
+        top: 0;
+        left: 0;
+      }
+
+      &1:before {
+        background-image: url('../images/infrastructure/infrastructure__card1.png');
+      }
+
+      &2:before {
+        background-image: url('../images/infrastructure/infrastructure__card2.png');
+      }
+
+      &3:before {
+        background-image: url('../images/infrastructure/infrastructure__card3.png');
+      }
+      
+      &4:before {
+        background-image: url('../images/infrastructure/infrastructure__card4.png');
+      }
+      
+      &5:before {
+        background-image: url('../images/infrastructure/infrastructure__card5.png');
+      }
+      
+      &6:before {
+        background-image: url('../images/infrastructure/infrastructure__card6.png');
+      }
+      
+      &7:before {
+        background-image: url('../images/infrastructure/infrastructure__card7.png');
+      }
+      
+      &8:before {
+        background-image: url('../images/infrastructure/infrastructure__card8.png');
+      }
+      
+      &9:before {
+        background-image: url('../images/infrastructure/infrastructure__card9.png');
+      }
+      
+      &10:before {
+        background-image: url('../images/infrastructure/infrastructure__card10.png');
+      }
+      
+      &11:before {
+        background-image: url('../images/infrastructure/infrastructure__card11.png');
+      }
+      
+      &12:before {
+        background-image: url('../images/infrastructure/infrastructure__card12.png');
+      }
+      
+      &13:before {
+        background-image: url('../images/infrastructure/infrastructure__card13.png');
+      }
+      
+      &14:before {
+        background-image: url('../images/infrastructure/infrastructure__card14.png');
+      }
+      
+      &15:before {
+        background-image: url('../images/infrastructure/infrastructure__card15.png');
+      }
+      
+      &16:before {
+        background-image: url('../images/infrastructure/infrastructure__card16.png');
+      }
+      
+      &17:before {
+        background-image: url('../images/infrastructure/infrastructure__card17.png');
+      }
+      
+      &18:before {
+        background-image: url('../images/infrastructure/infrastructure__card18.png');
+      }
+      
+      &19:before {
+        background-image: url('../images/infrastructure/infrastructure__card19.png');
+      }
+      
+      &20:before {
+        background-image: url('../images/infrastructure/infrastructure__card20.png');
+      }
+      
+      &21:before {
+        background-image: url('../images/infrastructure/infrastructure__card21.png');
+      }
+      
+      &22:before {
+        background-image: url('../images/infrastructure/infrastructure__card22.png');
+      }
+      
+      &23:before {
+        background-image: url('../images/infrastructure/infrastructure__card23.png');
+      }
+      
+      &24:before {
+        background-image: url('../images/infrastructure/infrastructure__card24.png');
+      }
+      
+      &25:before {
+        background-image: url('../images/infrastructure/infrastructure__card25.png');
+      }
+      
+      &26:before {
+        background-image: url('../images/infrastructure/infrastructure__card26.png');
+      }
+      
+      &27:before {
+        background-image: url('../images/infrastructure/infrastructure__card27.png');
+      }
+      
+      &28:before {
+        background-image: url('../images/infrastructure/infrastructure__card28.png');
+      }
+      
+      &29:before {
+        background-image: url('../images/infrastructure/infrastructure__card29.png');
+      }
+      
+      &30:before {
+        background-image: url('../images/infrastructure/infrastructure__card30.png');
+      }
+      
+      &31:before {
+        background-image: url('../images/infrastructure/infrastructure__card31.png');
+      }
+      
+      &32:before {
+        background-image: url('../images/infrastructure/infrastructure__card32.png');
+      }
+      
+      &33:before {
+        background-image: url('../images/infrastructure/infrastructure__card33.png');
+      }
+      
+      &34:before {
+        background-image: url('../images/infrastructure/infrastructure__card34.png');
+      }
+      
+      &35:before {
+        background-image: url('../images/infrastructure/infrastructure__card35.png');
+      }
+      
+      &36:before {
+        background-image: url('../images/infrastructure/infrastructure__card36.png');
+      }
+      
+      &37:before {
+        background-image: url('../images/infrastructure/infrastructure__card37.png');
+      }
+      
+      &38:before {
+        background-image: url('../images/infrastructure/infrastructure__card38.png');
+      }
+      
+      &39:before {
+        background-image: url('../images/infrastructure/infrastructure__card39.png');
+      }
+      
+      &40:before {
+        background-image: url('../images/infrastructure/infrastructure__card40.png');
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &__cards {
+      justify-content: center;
+    }
+
+    &__map{
+      display:none;
+    }
+
+    &__information{
+      margin-top: 0;
+    }
+
+    &__categories {
+      padding-top:0.2rem;
+    }
+
+    &__header{
+      .container{
+        flex-direction: column;
+        align-items:center;
+      }
+    }
+
+    &__switcher {
+      width: 200px;
+      height: 30px;
+      border-radius: 17px;
+      border: 3px solid #2467CD;
+      font-size: 11px;
+    }
+
+  }
+}

@@ -1,0 +1,150 @@
+.layouts {
+	margin-top: 1.1rem;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    svg{
+      width: 0.35rem;
+    }
+  }
+
+  &__icon{
+    width:0.7rem;
+  }
+
+  &__icons {
+    max-width: 3.5rem;
+    gap: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__information {
+    margin-top: 0.24rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__information-blocks {
+    display: flex;
+    max-width: 12rem;
+    gap: 0.4rem;
+
+    p{
+      font-size: 0.19rem;
+      font-family: 'DIN Pro medium';
+    }
+
+    .btn{
+      width: 2.6rem;
+      padding: 0.16rem 0.24rem;
+      grid-template-columns: 0.2rem auto;
+
+      p{
+        font-size: 0.14rem;
+      }
+
+      svg{
+        width:0.2rem;
+        height:0.2rem;
+      }
+    }
+  }
+
+  &__list {
+    font-size: 0.19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 150%;
+    margin: 0.1rem 0 0.2rem 0.23rem;
+  }
+
+  &__text{
+    font-size: 0.19rem;
+    margin-top: 0.1rem;
+  }
+
+  &__img {
+    height: 7rem;
+    width: 100%;
+    position: relative;
+    background-image: url("../images/other-blocks/layouts__img1.png");
+    background-size: cover;
+    background-position: center;
+
+    &-hidden {
+      background-image: url("../images/other-blocks/layouts__img2.png");
+      background-size: cover;
+      display: none;
+      background-position: center;
+      height: 7rem;
+      width: 100%;
+    }
+  }
+
+  &__house {
+    position: absolute;
+    width: 100px;
+    height: 33px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    color: white;
+    background-color: #242424;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 14px;
+    font-family: 'DIN Pro bold';
+    transition: background-color 1s, color 1s;
+
+    &:hover {
+      background-color: #fff;
+      color: #242424;
+    }
+
+    &-1 {
+      top:0.8rem;
+      left: 13%;
+    }
+
+    &-2 {
+      left: 80%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    &{
+      margin-bottom:1rem;
+    }
+
+    &__header{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__information-blocks{
+      flex-direction: column;
+    }
+
+    &__img,
+    &__house-1,
+    &__house-2{
+      display:none;
+    }
+
+    .article__title{
+      text-align:center;
+    }
+
+    &__information{
+      justify-content: center;
+      gap:0.2rem;
+    }
+  }
+}

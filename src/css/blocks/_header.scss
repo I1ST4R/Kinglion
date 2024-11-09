@@ -1,0 +1,152 @@
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: #DF7D00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.14rem 2.21rem 0.14rem 0.3rem;
+  z-index: 3;
+  transition: .5s;
+
+  .btn {
+
+    &:hover {
+      background-color: white;
+      color: black;
+
+      .header__svg-animate path{
+        fill: black;
+      }
+    }
+
+    img {
+      width: 0.48rem;
+      height: 0.39rem;
+    }
+
+    svg {
+      width: 0.22rem;
+    }
+  }
+
+  &__information {
+    min-width: 7.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.13rem;
+
+    .btn {
+      padding: 0.17rem 0.28rem;
+      background-color: transparent;
+    }
+
+    svg {
+      width: 0.64rem;
+      height: 0.64rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.25rem;
+    font-family: 'DIN Pro bold';
+    color: white;
+    padding: 0 0.15rem 0 0.1rem;
+  }
+
+  &__buttons {
+    width: 7.8rem;
+    display: grid;
+    grid-template-columns: 0rem 1.5rem 1.76rem 0.85rem 2.7rem;
+    gap: 0.15rem;
+    transform: scaleX(1);
+
+    .btn {
+      padding-left: 0.12rem;
+    }
+  }
+
+  &__arrow {
+    width: 0.35rem;
+    transform: rotate(90deg);
+    transition: .6s;
+    display: none;
+    cursor:pointer;
+
+    &--active {
+      transform: rotate(270deg);
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    & {
+      justify-content: space-between;
+      gap: 0.1rem;
+      padding: 0.14rem 0.2rem;
+    }
+
+    &__buttons {
+      width: 9.15rem;
+      grid-template-columns: 1.6rem 1.5rem 1.76rem 0.85rem 2.7rem;
+      position: absolute;
+      top: 1.1rem;
+      right: 0;
+      transform: scaleX(0);
+      transition: .5s;
+
+      &--active {
+        transform: scaleX(1);
+      }
+
+      #container2-for-header__btn .btn {
+        height: 100%;
+        text-align: center;
+        grid-template-columns: auto;
+        padding-left: 0;
+      }
+    }
+
+    &__arrow {
+      display: block;
+    }
+
+  }
+
+  @media screen and (max-width: 600px) {
+
+    & {
+      justify-content: space-between;
+    }
+
+    &__buttons {
+      width: 2.7rem;
+      right: 0.15rem;
+      grid-template-columns: 2.7rem;
+      grid-template-rows: auto auto auto auto auto;
+      gap: 0.1rem;
+
+      .btn--img {
+        height: 0.5rem;
+      }
+
+      & .btn:nth-child(-n+3) {
+        justify-content: center;
+        gap: 0.2rem;
+      }
+    }
+
+    &__information {
+      min-width: auto;
+
+      .header__logo {
+        display: none;
+      }
+    }
+
+    &__text {
+      display: none;
+    }
+
+  }
+
+}
